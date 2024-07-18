@@ -8,6 +8,8 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
+import nameLight from '../../assets/name-light.svg';
+import nameDark from '../../assets/name-dark.svg';
 import CV from '../../assets/cv.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
@@ -19,6 +21,7 @@ function Hero() {
   const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const nameIcon = theme === 'light' ? nameLight : nameDark;
 
   return (
   <section id="hero" className={styles.container}>
@@ -36,11 +39,11 @@ function Hero() {
         />
       </div>
       <div className={styles.info}>
-        <h1>
-          Micole
-          <br />
-          Marquez
-        </h1>
+        <img
+          src={nameIcon}
+          className={styles.name}
+          alt="Name of Micole Marquez"
+        />
         <h2>Tired uni student</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">

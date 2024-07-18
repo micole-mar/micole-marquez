@@ -1,13 +1,43 @@
-nav {
-    background-color: #333;
-    color: white;
+/* Base styles for the navbar */
+.nav {
+    background-color: transparent;
     padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+.dark {
+    background-color: #333;
+}
+
+.dark ul li a {
+    color: white;
+}
+
+/* Light mode */
+.light ul li a {
+    color: black;
+}
+
+.scrolled {
+    background-color: #333;
+}
+
+.scrolled ul li a {
+    color: white;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -15,10 +45,45 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Ensure the rest of the content doesn't hide under the fixed navbar */
+body {
+    padding-top: 70px;
 }
