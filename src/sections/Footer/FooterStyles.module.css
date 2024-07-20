@@ -1,7 +1,46 @@
 .container {
   text-align: center;
+
   p {
     font-size: 16px;
     color: var(--footer-text-color);
   }
+}
+
+/* FooterStyles.module.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container p {
+  font-size: 16px;
+  color: var(--footer-text-color);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
 }
