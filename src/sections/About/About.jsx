@@ -41,7 +41,7 @@ function About() {
       </div>
       <p className={styles.description}>
         Driven by a strong interest in numbers and problem-solving, I am drawn to the impactful role of technology and data. With skills in agile methodologies, software development, and data analytics, I am prepared to contribute to the tech industry. Eager to grow and learn, I am continually seeking new opportunities to expand my expertise and make a positive impact.
-    </p>
+        </p>
     </section>
   );
 }
